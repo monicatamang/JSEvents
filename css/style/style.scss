@@ -1,0 +1,110 @@
+@import "../partials/globals";
+
+header {
+    @include displayGridCenter();
+    margin-top: 5vh;
+    row-gap: 20px;
+    
+    >h1 {
+        cursor: pointer;
+    }
+}
+
+main {
+    @include displayGridCenter();
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    min-height: 80vh;
+    width: 90%;
+
+    article {
+        width: 100%;
+        height: 60vh;
+    }
+
+    #clickEffectContainer {
+        @include containerStyle();
+        background: rgba(0, 128, 0, 0.5);
+
+        #instructionsOne {
+            @include instructionsStyle();
+            background:rgba(0, 128, 0, 0.2);
+        }
+
+        #videoContainer {
+            @include displayGridCenter();
+            grid-template-rows: 3fr 1fr;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+                display: none;
+            }
+
+            button {
+                width: 8vw;
+                padding: 1% 0%;
+                font-family: 'Poppins', sans-serif;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    #tweetsContainer {
+        @include containerStyle();
+        background: rgba(135, 206, 235, 0.5);
+
+        #instructionsTwo {
+            @include instructionsStyle();
+            background:rgba(135, 206, 235, 0.5);
+        }
+
+        div {
+            @include displayGridCenter();
+            row-gap: 40px;
+
+            #randomTweets {
+                font-size: 1.2rem;
+                font-weight: 400;
+                padding: 0% 7%;
+            }
+
+            #usernames {
+                font-weight: 600;
+            }
+        }
+    }
+
+    #hoverEffectContainer {
+        @include containerStyle();
+        background: rgba(216, 112, 147, 0.5);
+
+        #instructionsThree {
+            @include instructionsStyle();
+        }
+
+        #hoverContainer {
+            position: relative;
+            width: 100%;
+
+            #box {
+                width: 100%;
+                height: 45vh;
+                background: rgb(216, 112, 147);
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 1vh;
+                left: 5vh;
+                width: 80%;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+footer {
+    min-height: 10vh;
+}

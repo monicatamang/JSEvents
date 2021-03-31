@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@mixin displayGridCenter {
+    display: grid;
+    place-items: center;
+}
+
+@mixin instructionsStyle() {
+    display: grid;
+    place-items: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin containerStyle {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    place-items: center;
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @include displayGridCenter();
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    max-width: 100vw;
+}

@@ -1,5 +1,20 @@
+// Creating a function that randomly changes the viewport's colour when the user hovers over the header title
+function changeBackgroundColor(e) {
+    let colors = [`white`, `lightgrey`, `beige`, `lightcyan`, `lavender`];
+    let randomNum = Math.floor(Math.random() * colors.length);
+    page.style.background = colors[randomNum];
+}
+
+// Creating a function that shows a video and changes the color of the box's background when the user clicks on the button
+function showVideo(e) {
+    document.getElementById(`shortVideo`).style.display = `block`;
+    document.getElementById(`clickEffectContainer`).style.background = `#bc8f8f80`;
+    document.getElementById(`instructionsOne`).style.background = `#bc8f8f80`;
+}
+
 // Creating a function that when the user clicks on their space bar, a new tweet is generated and printed to the DOM each time
 // Note: Since e is an array of objects, we can restrict the 'keypress' event to have the user only press on the space bar and not any other key by using the 'keyCode'
+// Creating an array of 10 tweets as strings (taken from Assignment W9C)
 function generateTweet(e) {
     let tweets = [
         {
@@ -80,48 +95,28 @@ function generateTweet(e) {
     }
 }
 
+// Creating a function that 'reveals' an image when the user hovers over the pink box by changing the opacity of the image so that it shows up on the page, changing the background colour of the box, adding transition effects when the image is revealed
 function revealImage(e) {
-    // console.log(e);
-    // boxes[i].style.opacity = `0`;
-    // let squares = document.getElementsByClassName(`box`);
-    // for(i = 0; i < squares.length; i++) {
-    
-    // }
-    // let boxOne = document.getElementById(`box1`);
-    // boxOne.style.opacity = `0`;
-    // boxOne.removeEventListener(`mouseover`, revealImage);
-    // let boxTwo = document.getElementById(`box2`);
-    // boxTwo.style.opacity = `0`;
-    // let boxThree = document.getElementById(`box3`);
-    // boxThree.style.opacity = `0`;
-    // let boxFour = document.getElementById(`box4`);
-    // boxFour.style.opacity = `0`;
-    // let boxFive = document.getElementById(`box5`);
-    // boxFive.style.opacity = `0`;
-    // let boxSix = document.getElementById(`box6`);
-    // boxSix.style.opacity = `0`;
-    // let boxSeven = document.getElementById(`box7`);
-    // boxSeven.style.opacity = `0`;
-    // let boxEight = document.getElementById(`box8`);
-    // boxEight.style.opacity = `0`;
-    // let boxNine = document.getElementById(`box9`);
-    // boxNine.style.opacity = `0`;
+    square.style.opacity = `0`;
+    square.style.transition = `all 0.5s ease-in-out`;
+    document.querySelector(`img`).style.opacity = `1`;
+    document.querySelector(`img`).style.transition = `all 5s ease-in-out`;
+    document.getElementById(`instructionsThree`).style.background = `#daa52033`;
+    document.getElementById(`hoverEffectContainer`).style.background = `#daa52080`;
 }
 
-function showVideo(e) {
-    document.getElementById(`shortVideo`).style.display = `block`;
-    document.getElementById(`clickEffectContainer`).style.background = `#bc8f8f80`;
-    document.getElementById(`instructionsOne`).style.background = `#bc8f8f80`;
-} 
+// Adding an event when the user hovers over the header title and calling the function that carries out that specific event
+let headerTitle = document.querySelector(`h1`);
+headerTitle.addEventListener(`mouseover`, changeBackgroundColor);
 
-// Adding an event when the user presses on their space bar
+// Adding an event when the user clicks on the 'watch video' button and calling the function that carries out that specific event
+let videoButton = document.querySelector(`button`);
+videoButton.addEventListener(`click`, showVideo);
+
+// Adding an event when the user presses on their space bar and calling the function that carries out that specific event
 let page = document.body;
 page.addEventListener(`keypress`, generateTweet);
 
-let boxes = document.getElementsByClassName(`box`);
-for(i = 0; i < boxes.length; i++) {
-    boxes[i].addEventListener(`mouseover`, revealImage);
-}
-
-let videoButton = document.querySelector(`button`);
-videoButton.addEventListener(`click`, showVideo);
+// Adding an event when the user hovers over the pink box and calling the function that carries out that specific event
+let square = document.getElementById(`box`);
+square.addEventListener(`mouseover`, revealImage);
