@@ -9,24 +9,47 @@
 </head>
 <body>
     <header>
-        <h1 id="title">Random Generator</h1>
+        <h1 id="title">Random Website</h1>
         <p></p>
     </header>
     <main>
-        <article id="clickEffectsContainer"></article>
+        <article id="clickEffectContainer">
+            <p class="instructions" id="instructionsOne">Click to watch a 5 minute video!</p>
+            <div id="videoContainer">
+                <iframe id="shortVideo" src="https://www.youtube.com/embed/t4Q8OhAIXZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>This video is not supported by your browser.</iframe>
+                <button>Watch Video</button>
+            </div>
+        </article>
         <article id="tweetsContainer">
-            <p class="instructions" id="instructionsTwo">Press the space bar to receive a random tweet!</p>
+            <p class="instructions" id="instructionsTwo">Press your space bar to receive a random tweet!</p>
             <div>
                 <p id="randomTweets"></p>
                 <p id="usernames"></p>
                 <p id="dateCreated"></p>
             </div>
         </article>
-        <article id="hoverEffectsContainer">
-            <p class="instructions" id="instructionsThree">Hover over the box to reveal a surprise!</p>
-            <div>
-                <p id="hoverMessage"></p>
+        <article id="hoverEffectContainer">
+            <p class="instructions" id="instructionsThree">Hover over the boxes to reveal a surprise! Can you guess what it is?</p>
+            <div id="hoverContainer">
                 <img src="/images/giraffe.png" alt="">
+                <div class="box" id="box1"></div>
+                <div class="box" id="box2"></div>
+                <div class="box" id="box3"></div>
+                <div class="box" id="box4"></div>
+                <div class="box" id="box5"></div>
+                <div class="box" id="box6"></div>
+                <div class="box" id="box7"></div>
+                <div class="box" id="box8"></div>
+                <div class="box" id="box9"></div>
+                <!-- <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div> -->
             </div>
         </article>
     </main>

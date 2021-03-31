@@ -10,6 +10,7 @@ body {
   place-items: center;
   font-family: 'Poppins', sans-serif;
   text-align: center;
+  max-width: 100vw;
 }
 
 body header {
@@ -33,8 +34,46 @@ body main article {
   height: 60vh;
 }
 
-body main #clickEffectsContainer {
+body main #clickEffectContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 3fr;
+      grid-template-rows: 1fr 3fr;
+  place-items: center;
   background: rgba(0, 128, 0, 0.5);
+  cursor: pointer;
+}
+
+body main #clickEffectContainer #instructionsOne {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  background: rgba(0, 128, 0, 0.2);
+  width: 100%;
+  height: 100%;
+}
+
+body main #clickEffectContainer #videoContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 3fr 1fr;
+      grid-template-rows: 3fr 1fr;
+  place-items: center;
+}
+
+body main #clickEffectContainer #videoContainer iframe {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+body main #clickEffectContainer #videoContainer button {
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  width: 8vw;
+  padding: 1% 0%;
 }
 
 body main #tweetsContainer {
@@ -52,7 +91,7 @@ body main #tweetsContainer #instructionsTwo {
   place-items: center;
   font-weight: 500;
   font-size: 0.9rem;
-  background: rgba(135, 206, 235, 0.2);
+  background: rgba(135, 206, 235, 0.5);
   width: 100%;
   height: 100%;
 }
@@ -79,16 +118,16 @@ body main #tweetsContainer div #dateCreated {
   font-size: 1rem;
 }
 
-body main #hoverEffectsContainer {
+body main #hoverEffectContainer {
   display: -ms-grid;
   display: grid;
-  place-items: center;
   -ms-grid-rows: 1fr 3fr;
       grid-template-rows: 1fr 3fr;
+  place-items: center;
   background: rgba(216, 112, 147, 0.5);
 }
 
-body main #hoverEffectsContainer #instructionsThree {
+body main #hoverEffectContainer #instructionsThree {
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -99,7 +138,30 @@ body main #hoverEffectsContainer #instructionsThree {
   height: 100%;
 }
 
-body main #hoverEffectsContainer img {
+body main #hoverEffectContainer #hoverContainer {
+  position: relative;
   width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+body main #hoverEffectContainer #hoverContainer .box {
+  width: 100%;
+  height: 92px;
+  background: #d87093;
+  z-index: 1;
+  outline: 1px solid white;
+  cursor: pointer;
+}
+
+body main #hoverEffectContainer #hoverContainer img {
+  position: absolute;
+  top: 5vh;
+  left: 5vh;
+  width: 80%;
 }
 /*# sourceMappingURL=style.css.map */
