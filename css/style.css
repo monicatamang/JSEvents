@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+body header {
+  margin-top: 5vh;
+}
+
+body main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  min-height: 80vh;
+  width: 90%;
+}
+
+body main article {
+  width: 100%;
+  height: 60vh;
+}
+
+body main #clickEffectsContainer {
+  background: rgba(0, 128, 0, 0.5);
+}
+
+body main #tweetsContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 3fr;
+      grid-template-rows: 1fr 3fr;
+  place-items: center;
+  background: rgba(135, 206, 235, 0.5);
+}
+
+body main #tweetsContainer #instructionsTwo {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  background: rgba(135, 206, 235, 0.2);
+  width: 100%;
+  height: 100%;
+}
+
+body main #tweetsContainer div {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  row-gap: 40px;
+}
+
+body main #tweetsContainer div #randomTweets {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0% 7%;
+}
+
+body main #tweetsContainer div #usernames {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+body main #tweetsContainer div #dateCreated {
+  font-size: 1rem;
+}
+
+body main #hoverEffectsContainer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-rows: 1fr 3fr;
+      grid-template-rows: 1fr 3fr;
+  background: rgba(216, 112, 147, 0.5);
+}
+
+body main #hoverEffectsContainer #instructionsThree {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  background: rgba(216, 112, 147, 0.2);
+  width: 100%;
+  height: 100%;
+}
+
+body main #hoverEffectsContainer img {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+
+    header {
+        margin-top: 5vh;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        column-gap: 10px;
+        min-height: 80vh;
+        width: 90%;
+
+        article {
+            width: 100%;
+            height: 60vh;
+        }
+
+        #clickEffectsContainer {
+            background: rgba(0, 128, 0, 0.5);
+        }
+        
+        #tweetsContainer {
+            display: grid;
+            grid-template-rows: 1fr 3fr;
+            place-items: center;
+            background: rgba(135, 206, 235, 0.5);
+
+            #instructionsTwo {
+                display: grid;
+                place-items: center;
+                font-weight: 500;
+                font-size: 0.9rem;
+                background:rgba(135, 206, 235, 0.2);
+                width: 100%;
+                height: 100%;
+            }
+
+            div {
+                display: grid;
+                place-items: center;
+                row-gap: 40px;
+    
+                #randomTweets {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    padding: 0% 7%;
+                }
+    
+                #usernames {
+                    font-weight: 600;
+                    font-size: 1rem;
+                }
+
+                #dateCreated {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        #hoverEffectsContainer {
+            display: grid;
+            place-items: center;
+            grid-template-rows: 1fr 3fr;
+            background: rgba(216, 112, 147, 0.5);
+
+            #instructionsThree {
+                display: grid;
+                place-items: center;
+                font-weight: 500;
+                font-size: 0.9rem;
+                background:rgba(216, 112, 147, 0.2);
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
